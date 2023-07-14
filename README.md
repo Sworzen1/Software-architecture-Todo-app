@@ -32,11 +32,11 @@ App will have three containers:
 
 The user represents the person who interacts with the To Do List app through the mobile app. The user interacts with the application by sending requests, based on which it receives responses consistent with the state of the database.
 
-### 3a Mobile application
+### 3a. Mobile application
 
 App has a minimalist, intuitive and simple interface. Focused on simplicity and clarity, such an interface may only contain basic elements such as a task list, buttons for adding. We can use simple but nice animations, additionally add gestures to enhance the user experience.
 
-### 3b Rest API
+### 3b. Rest API
 
 API methods for main features:
 
@@ -67,7 +67,7 @@ Authentication and Authorization: We will authorize the user and store his sessi
 
 Notifications: We'll use Firebase and his SDK for push notifications.
 
-### 3a Database
+### 3a. Database
 
 The database container represents the storage system for the application. It stores data related to tasks, users and other relevant information. The best choice for this simple application is the cloud-hosted and non-relational Firebase database. In addition, Firebase provides a lot of SDKs that can help in development.
 
