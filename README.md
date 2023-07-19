@@ -56,7 +56,7 @@ PUT:
 
 DELETE:
 
--Deletes the tasks
+- Deletes the tasks
 
 URIs: Resources are identified using URIs. For example, a URI for a task resource in a Todo List API could be
 `BASEURL/tasks/{taskId}.`
