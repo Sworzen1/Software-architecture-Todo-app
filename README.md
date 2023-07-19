@@ -80,11 +80,22 @@ Each of three application's containers are build from components. We want to pre
 
 ### 4a. API
 
-The main components will be the controllers, they define the endpoints that define the parameters and data accepted by requests. additionally, the controllers decide which action should be done.
+#### Controllers
+The main components will be the controllers, they define the endpoints that define the parameters and data accepted by requests. Additionally, the controllers decide which action should be done.
+
+  - Sign in/ Sign up/ Reset password controllers - allow user to makes actions connected with account
+  - Create task/ Delete task/ Update task controllers - allow user to makes actions connected with tasks
+  - Progress controller - gives user informations about his account progress
 
 Services store methods that will be executed if we use them in controllers or by other methods. They perform operations and modify data.
 
+  - User service - contains methods like create account with password encryption, login to account, change password  
+  - Task service - contains methods connected with create, delete, update tasks like simple CRUD (Create, Read, Update, Delete)
+  - Notifications service - has methods connected with notification like send messages
+
 External SDKs will be used for faster development, thanks to which we will save time and do not have to worry about writing everything from scratch. SDKs provides a package of methods that we can use in an easy and accessible way. The entire implementation process is described in the certain SDK documentation.
+
+  - Firebase Cloud Messaging - is tool that lets you reliably send messages.
 
 ![APIComponents](images/APIComponents.png)
 
