@@ -56,7 +56,7 @@ PUT:
 
 DELETE:
 
--Deletes the tasks
+- Deletes the tasks
 
 URIs: Resources are identified using URIs. For example, a URI for a task resource in a Todo List API could be
 `BASEURL/tasks/{taskId}.`
@@ -72,3 +72,26 @@ Notifications: We'll use Firebase and his SDK for push notifications.
 The database container represents the storage system for the application. It stores data related to tasks, users and other relevant information. The best choice for this simple application is the cloud-hosted and non-relational Firebase database. In addition, Firebase provides a lot of SDKs that can help in development.
 
 ![Container](images/Container.png)
+
+## 4. Components
+
+Each of three application's containers are build from components. We want to present the tasks and responsibilities of each of them to make it easier to implement them. This is very important because it shows the full scope of the application's functionality. Thanks to this, it will also be easier to accurately price the application.
+
+
+### 4a. API
+
+The main components will be the controllers, they define the endpoints that define the parameters and data accepted by requests. additionally, the controllers decide which action should be done.
+
+Services store methods that will be executed if we use them in controllers or by other methods. They perform operations and modify data.
+
+External SDKs will be used for faster development, thanks to which we will save time and do not have to worry about writing everything from scratch. SDKs provides a package of methods that we can use in an easy and accessible way. The entire implementation process is described in the certain SDK documentation.
+
+![APIComponents](images/APIComponents.png)
+
+
+
+
+
+
+
+
