@@ -86,13 +86,14 @@ The main components will be the controllers, they define the endpoints that defi
   - Sign in/ Sign up/ Reset password controllers - allow user to makes actions connected with account
   - Create task/ Delete task/ Update task controllers - allow user to makes actions connected with tasks
   - Progress controller - gives user informations about his account progress
-
+#### Services
 Services store methods that will be executed if we use them in controllers or by other methods. They perform operations and modify data.
 
   - User service - contains methods like create account with password encryption, login to account, change password  
   - Task service - contains methods connected with create, delete, update tasks like simple CRUD (Create, Read, Update, Delete)
   - Notifications service - has methods connected with notification like send messages
 
+#### SDKs
 External SDKs will be used for faster development, thanks to which we will save time and do not have to worry about writing everything from scratch. SDKs provides a package of methods that we can use in an easy and accessible way. The entire implementation process is described in the certain SDK documentation.
 
   - Firebase Cloud Messaging - is tool that lets you reliably send messages.
@@ -100,9 +101,26 @@ External SDKs will be used for faster development, thanks to which we will save 
 ![APIComponents](images/APIComponents.png)
 
 
+### 4b. Mobile app
 
+#### Screens
+They show the user the actual state of the application. They are adapted so that navigating the application is intuitive and easy for new users. They contain animations and gestures that attract the user to want to use the software. They use hooks to get information stored in the database and perform API actions.
 
+  - Sign in/ Sign up/ Change password screen - these are forms, through the inputs they read the data that the user provides and pass to the API methods
+  - Tasks list screen - this is scroll view which has list of tasks and modal for edit and create the new
+  - Settings screen - contains all informations about user, application and notifications
 
+#### Hooks
+Hooks are files with application logic on the frontend side, they manage data and app state. Are written in typesscript using already existing React hooks. Thanks to them, we avoid excess content in UI files by moving the logic.
 
+  - useGetTasksQuery - fetch certain user tasks
+  - useGetUserProgressQuery - fetch user progress
+  - useGetUserInformationsQuery - fetch user information like user nickname or age etc.
+  - useCreateTaskMutation - create new task
+  - useDeleteTaskMutation - delete existing task
+  - useUpdateTaskMutation - update existing task
+  - useChangePasswordMutation - change user password
+  - useRegisterMutation - create new account
+  - useAuthMutation - authentication existing user
 
-
+![MobileAppComponents](images/MobileAppComponents.png)
